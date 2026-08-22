@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A new undergraduate journal of legal scholarship being founded at Bowdoin College, published by the Bowdoin Pre-Law Society. The founding board is forming; no issue has been published yet.">
+<meta name="description" content="A new undergraduate journal of legal scholarship at Bowdoin College, published by the Bowdoin Pre-Law Society. This site is under construction; the Review will be active from the start of the 2026-27 academic year.">
 <meta property="og:title" content="Bowdoin Undergraduate Law Review">
-<meta property="og:description" content="An undergraduate journal of legal scholarship written, edited, and published by students. In formation.">
+<meta property="og:description" content="An undergraduate journal of legal scholarship written, edited, and published by students. Site under construction; active from the 2026-27 academic year.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.2896%202.2896%22%20role%3D%22img%22%20aria-label%3D%22Bowdoin%20Undergraduate%20Law%20Review%22%3E%3Cg%20transform%3D%22translate%280.3045%2C0.0648%29%22%3E%3Cpath%20d%3D%22M0.1800%200.2300H1.5006M0.1800%201.9300H1.5006%22%20stroke%3D%22%23101413%22%20stroke-width%3D%220.1000%22%20fill%3D%22none%22%2F%3E%3Cg%20transform%3D%22translate%280.4276%2C1.5800%29%20scale%280.001408%2C-0.001408%29%22%20fill%3D%22%23101413%22%3E%3Cpath%20transform%3D%22translate%28-40.0000%2C0%29%22%20d%3D%22M40%20-3V22L60%2024Q99%2028%20117.0%2036.0Q135%2044%20140.5%2066.0Q146%2088%20146%20133V577Q146%20622%20140.5%20644.0Q135%20666%20117.0%20674.0Q99%20682%2060%20686L40%20688V713L188%20710H310Q442%20710%20513.0%20668.5Q584%20627%20584%20550Q584%20488%20542.5%20442.5Q501%20397%20423%20374L420%20381Q520%20377%20573.0%20331.0Q626%20285%20626%20202Q626%20107%20557.0%2053.5Q488%200%20366%200H188ZM310%2028H366Q454%2028%20493.0%2068.5Q532%20109%20532%20199Q532%20261%20513.0%20296.0Q494%20331%20448.0%20345.0Q402%20359%20320%20359H221V387H360Q424%20387%20457.5%20428.0Q491%20469%20491%20547Q491%20621%20457.0%20651.5Q423%20682%20340%20682H227V129Q227%2074%20245.5%2051.0Q264%2028%20310%2028Z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <title>Bowdoin Undergraduate Law Review</title>
@@ -361,6 +361,26 @@
 
   /* ── Body ──────────────────────────────────── */
 
+  .notice {
+    border: 1px solid var(--accent);
+    background: var(--tint);
+    padding: 1.1rem 1.3rem;
+    margin-top: clamp(1.85rem, 3.4vw, 2.6rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .notice h2 {
+    font-family: var(--f-ui);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+  .notice p { margin: 0; color: var(--ink-2); max-width: 74ch; }
+
   .cols {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 296px;
@@ -582,25 +602,14 @@
           <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="m-about" data-group="about">About<svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
           <div class="nav-menu" id="m-about" hidden>
             <a href="#about">Mission<span>What the Review will publish</span></a>
-            <a href="#board">Founding Board<span>Positions open</span></a>
+            <a href="#board">Founding Board<span>Seated 2025</span></a>
           </div>
         </div>
 
         <a class="nav-link" href="#volume" data-group="volume">Volume I</a>
         <a class="nav-link" href="#submissions" data-group="submissions">Submissions</a>
-        <a class="nav-link" href="#join" data-group="join">Join</a>
-
-        <div class="nav-item">
-          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="m-contact">Contact<svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-          <div class="nav-menu nav-menu--right" id="m-contact" hidden>
-            <a href="mailto:lawreview@bowdoin.edu">lawreview@bowdoin.edu<span>General enquiries</span></a>
-            <a href="mailto:submissions@bowdoinlawreview.org">submissions@bowdoinlawreview.org<span>Manuscripts</span></a>
-            <hr>
-            <a href="#contact">Bowdoin College, Brunswick ME<span>Published by the Pre-Law Society</span></a>
-          </div>
-        </div>
       </nav>
-      <span class="status"><span class="status__dot"></span>In formation</span>
+      <span class="status"><span class="status__dot"></span>Site in progress</span>
     </div>
   </div>
 </div>
@@ -616,7 +625,7 @@
         <p class="hero__sub">An undergraduate journal of legal scholarship written, edited, and published by students.</p>
       </div>
       <div class="rail">
-        <div class="rail__row"><span class="rail__k">Status</span><span class="rail__v">In formation</span></div>
+        <div class="rail__row"><span class="rail__k">Status</span><span class="rail__v">Launching 2026–27</span></div>
         <div class="rail__row"><span class="rail__k">First volume</span><span class="rail__v">In preparation</span></div>
         <div class="rail__row"><span class="rail__k">Founded</span><span class="rail__v">2025</span></div>
         <div class="rail__row"><span class="rail__k">Published by</span><span class="rail__v">Pre-Law Society</span></div>
@@ -628,6 +637,11 @@
 </header>
 
 <div class="wrap">
+  <div class="notice" role="note">
+    <h2>This site is under construction</h2>
+    <p>The Bowdoin Undergraduate Law Review is not yet operating. The masthead, editorial policy, submission guidelines, and contact details are still being finalised and will be published here in full. The Review will be active from the start of the 2026–27 academic year.</p>
+  </div>
+
   <div class="cols">
     <main class="stack">
 
@@ -635,36 +649,35 @@
         <div class="block__head"><h2>About the Review</h2><span class="eyebrow">Est. 2025</span></div>
         <p class="lede">Serious engagement with the law does not require a law degree — only careful reading, honest argument, and a <em>willingness to be edited.</em></p>
         <p class="drop">The Bowdoin Undergraduate Law Review is a new journal, founded in 2025 and published by the Bowdoin Pre-Law Society. It will publish original legal scholarship written and edited entirely by undergraduates — constitutional law, jurisprudence, legal history, law and society, and international law, with a standing interest in the legal questions particular to Maine and the Northeast.</p>
-        <p>The Review has not yet published an issue. The founding board is being assembled now, and the editorial policy — how submissions are reviewed, which citation standard we hold to, when the deadlines fall — will be set by that board and published here in full before we open for submissions.</p>
+        <p>The Review has not yet published an issue. Its founding editorial board was seated in 2025 and is now setting the Review's editorial policy — how submissions are reviewed, which citation standard we hold to, when the deadlines fall. That policy, and the masthead, will be published here before the Review opens for submissions in the 2026–27 academic year.</p>
       </section>
 
       <section id="volume" class="mission">
         <div class="block__head"><h2>Volume I</h2><span class="eyebrow">In preparation</span></div>
-        <p>No issue has been published yet. Volume I is in preparation, and its date will be announced once the founding board has set it.</p>
+        <p>No issue has been published yet. Volume I is in preparation, and its date will be announced during the 2026–27 academic year.</p>
         <p>Nothing will appear on this page that has not been written by an undergraduate and read by our editors. When the first issue is published, it will be archived so that the articles in it remain citable permanently.</p>
       </section>
 
       <section id="submissions" class="mission">
         <div class="block__head"><h2>Submissions</h2><span class="eyebrow">Not yet open</span></div>
         <p>Submissions are not open. When they are, the Review will accept work from undergraduates at any institution, and papers written for coursework will be welcome — in practice that is most of what journals like this publish.</p>
-        <p>Full guidelines — length, citation style, the review process, and the deadlines for each cycle — will be posted here before the first call for papers. If you would like to be told when that happens, write to <a href="mailto:submissions@bowdoinlawreview.org">submissions@bowdoinlawreview.org</a>.</p>
+        <p>Full guidelines — length, citation style, the review process, and the deadlines for each cycle — will be posted here before the first call for papers, along with the address to send work to. Submissions are expected to open during the 2026–27 academic year.</p>
       </section>
 
     </main>
 
     <aside class="side">
-      <div class="box box--accent" id="join">
-        <h3>Join the Review</h3>
-        <p>The founding board is forming now. No prerequisites and no prior legal coursework — staff editors read submissions, write comments, and check citations.</p>
-        <p>We are also looking for students interested in design, web, events, and outreach.</p>
-        <a class="btn btn--wide" href="mailto:lawreview@bowdoin.edu">Get in touch</a>
+      <div class="box box--accent">
+        <h3>Opening 2026–27</h3>
+        <p>The Review becomes active at the start of the 2026–27 academic year. Until then this page stands as a placeholder.</p>
+        <p>Everything still marked "to be announced" will be published before that date.</p>
       </div>
 
       <div class="box">
         <h3>Where we are</h3>
         <dl class="dl">
           <div><dt>Founded</dt><dd>2025</dd></div>
-          <div><dt>Board</dt><dd>Forming</dd></div>
+          <div><dt>Board</dt><dd>Seated</dd></div>
           <div><dt>Volume I</dt><dd>In preparation</dd></div>
           <div><dt>Submissions</dt><dd>Not yet open</dd></div>
         </dl>
@@ -681,15 +694,15 @@
 <div class="board-band">
   <div class="wrap">
     <section id="board">
-      <div class="block__head"><h2>Founding board</h2><span class="eyebrow">Positions open</span></div>
-      <p style="max-width:64ch;margin:0 0 1.9rem;color:var(--ink-2)">The founding editorial board is being assembled for the 2025–26 year. Every position below is open to Bowdoin students, and none of them requires prior legal coursework.</p>
+      <div class="block__head"><h2>Founding board</h2><span class="eyebrow">Seated 2025</span></div>
+      <p style="max-width:64ch;margin:0 0 1.9rem;color:var(--ink-2)">The founding editorial board was seated in 2025. The masthead will be published here in full ahead of the 2026–27 academic year.</p>
       <div class="seats">
-        <div class="seat"><p class="seat__role">Editor-in-Chief</p><p class="seat__name">Open</p></div>
-        <div class="seat"><p class="seat__role">Managing Editor</p><p class="seat__name">Open</p></div>
-        <div class="seat"><p class="seat__role">Executive Articles</p><p class="seat__name">Open</p></div>
-        <div class="seat"><p class="seat__role">Notes Editor</p><p class="seat__name">Open</p></div>
-        <div class="seat"><p class="seat__role">Citations Editor</p><p class="seat__name">Open</p></div>
-        <div class="seat"><p class="seat__role">Faculty Advisor</p><p class="seat__name">Open</p></div>
+        <div class="seat"><p class="seat__role">Editor-in-Chief</p><p class="seat__name">To be announced</p></div>
+        <div class="seat"><p class="seat__role">Managing Editor</p><p class="seat__name">To be announced</p></div>
+        <div class="seat"><p class="seat__role">Executive Articles</p><p class="seat__name">To be announced</p></div>
+        <div class="seat"><p class="seat__role">Notes Editor</p><p class="seat__name">To be announced</p></div>
+        <div class="seat"><p class="seat__role">Citations Editor</p><p class="seat__name">To be announced</p></div>
+        <div class="seat"><p class="seat__role">Faculty Advisor</p><p class="seat__name">To be announced</p></div>
       </div>
     </section>
   </div>
@@ -709,13 +722,13 @@
       </div>
       <div class="foot__col">
         <span class="eyebrow">Contact</span>
-        <p><a href="#">lawreview@bowdoin.edu</a></p>
-        <p><a href="#">submissions@bowdoinlawreview.org</a></p>
+        <p>To be announced</p>
+        <p>Ahead of the 2026–27 year</p>
       </div>
       <div class="foot__col">
         <span class="eyebrow">Sections</span>
+        <p><a href="#about">About</a></p>
         <p><a href="#volume">Volume I</a></p>
-        <p><a href="#submissions">Submissions</a></p>
         <p><a href="#board">Founding Board</a></p>
       </div>
     </div>
