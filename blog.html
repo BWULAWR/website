@@ -85,7 +85,7 @@
 
   /* ── Home masthead ───────────────────────── */
   .masthead { position: relative; isolation: isolate; overflow: hidden; background: var(--band); color: var(--band-ink); }
-  .masthead__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%; filter: brightness(.86) contrast(1.02); }
+  .masthead__bg { position: absolute; left: 0; right: 0; top: -80px; z-index: -2; width: 100%; height: calc(100% + 160px); object-fit: cover; object-position: 50% 44%; filter: brightness(.86) contrast(1.02); }
   .masthead__scrim { position: absolute; inset: 0; z-index: -1;
     background: linear-gradient(96deg, rgba(6,6,6,.93) 0%, rgba(6,6,6,.86) 30%, rgba(6,6,6,.52) 62%, rgba(6,6,6,.34) 100%),
                 linear-gradient(to bottom, rgba(6,6,6,.42) 0%, rgba(6,6,6,.10) 40%, rgba(6,6,6,.50) 100%); }
@@ -143,9 +143,54 @@
   .foot__legal { margin-top: 1.25rem; padding-top: .95rem; border-top: 1px solid var(--band-line); }
   .foot__legal p { margin: 0; font-size: .72rem; line-height: 1.55; color: var(--band-grey); max-width: 90ch; }
 
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  /* ── Ornament ───────────────────────────── */
+  .ornament { display: flex; align-items: center; justify-content: center; gap: 1.1rem; color: var(--line); margin: 0 0 1.6rem; }
+  .ornament::before, .ornament::after { content: ""; height: 1px; width: min(26%, 150px); background: currentColor; }
+  .ornament span { font-family: var(--f-display); font-size: 1.15rem; color: var(--grey); line-height: 1; }
+  .empty-wrap { display: flex; flex-direction: column; align-items: center; text-align: center; padding-block: clamp(1.5rem, 4vw, 3rem); }
+
+  /* ── Motion ─────────────────────────────── */
+  /* the rule under a heading draws itself in; falls back to a plain border */
+  .sec-head { position: relative; }
+  .js .sec-head { border-bottom-color: transparent; }
+  .js .sec-head::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px;
+    background: var(--ink); transform-origin: left;
+  }
+  .topnav a { position: relative; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .js .reveal { opacity: 0; transform: translateY(13px); }
+    .js .reveal.is-in { opacity: 1; transform: none;
+      transition: opacity .75s cubic-bezier(.22,.61,.25,1), transform .75s cubic-bezier(.22,.61,.25,1); }
+    .js .sec-head::after { transform: scaleX(0); transition: transform .9s cubic-bezier(.22,.61,.25,1) .1s; }
+    .js .sec-head.is-in::after { transform: scaleX(1); }
+    .js .hero__name { opacity: 0; transform: translateY(18px); animation: rise .95s cubic-bezier(.22,.61,.25,1) .12s forwards; }
+    .js .pagehead h1 { opacity: 0; transform: translateY(14px); animation: rise .8s cubic-bezier(.22,.61,.25,1) .08s forwards; }
+    .js .pagehead .eyebrow { opacity: 0; animation: fade .8s ease .02s forwards; }
+    .masthead__bg { will-change: transform; }
+  }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  @keyframes fade { to { opacity: 1; } }
+
+  /* nav underline grows from the left rather than blinking on */
+  .topnav a { border-bottom-color: transparent !important; }
+  .topnav a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+    background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .28s cubic-bezier(.22,.61,.25,1);
+  }
+  .topnav a:hover::after, .topnav a:focus-visible::after, .topnav a[aria-current="page"]::after { transform: scaleX(1); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+    .js .reveal { opacity: 1; transform: none; }
+    .js .sec-head::after { transform: scaleX(1); }
+    .js .hero__name, .js .pagehead h1, .js .pagehead .eyebrow { opacity: 1; transform: none; }
+  }
   @media (max-width: 430px) { .topbar__mark { white-space: normal; font-size: .92rem; line-height: 1.22; min-width: 0; } }
 </style>
+<script>document.documentElement.className += ' js';</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 5.4170 2.1960"><path d="M0.183 0.226H5.234M0.183 1.971H5.234" stroke="currentColor" stroke-width="0.085" fill="none"/><g transform="translate(0.4536,1.5980) scale(0.001408,-0.001408)" fill="currentColor"><path transform="translate(-40.00,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L188 710H310Q442 710 513.0 668.5Q584 627 584 550Q584 488 542.5 442.5Q501 397 423 374L420 381Q520 377 573.0 331.0Q626 285 626 202Q626 107 557.0 53.5Q488 0 366 0H188ZM310 28H366Q454 28 493.0 68.5Q532 109 532 199Q532 261 513.0 296.0Q494 331 448.0 345.0Q402 359 320 359H221V387H360Q424 387 457.5 428.0Q491 469 491 547Q491 621 457.0 651.5Q423 682 340 682H227V129Q227 74 245.5 51.0Q264 28 310 28Z"/><path transform="translate(796.00,0)" d="M387 -11Q260 -11 195.5 48.0Q131 107 131 223V577Q131 622 125.5 644.0Q120 666 102.0 674.0Q84 682 45 686L25 688V713L173 710H174L322 713V688L302 686Q264 682 245.5 673.5Q227 665 221.5 643.5Q216 622 216 577V223Q216 127 268.5 74.5Q321 22 415 22Q508 22 556.0 74.5Q604 127 604 229V577Q604 622 598.5 644.0Q593 666 575.0 674.0Q557 682 518 686L498 688V713L646 711L745 713V688L725 686Q687 682 668.5 673.5Q650 665 644.5 643.5Q639 622 639 577V229Q639 109 576.5 49.0Q514 -11 387 -11Z"/><path transform="translate(1696.00,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L190 710L337 713V688L309 685Q278 682 261.0 673.0Q244 664 237.5 644.5Q231 625 231 589V172Q231 113 240.0 82.0Q249 51 274.5 40.0Q300 29 348 29H423Q505 29 545.5 72.0Q586 115 594 210H616L606 -3L188 0Z"/><path transform="translate(2497.00,0)" d="M609 -11Q558 -11 529.0 21.5Q500 54 491 121Q481 200 454.5 249.5Q428 299 384.0 322.5Q340 346 274 346H225V373H315Q407 373 447.5 410.0Q488 447 488 529Q488 609 449.5 646.5Q411 684 330 684H231V133Q231 88 236.5 66.0Q242 44 260.5 36.0Q279 28 317 24L337 22V-3L188 0L40 -3V22L60 24Q99 28 117.0 36.5Q135 45 140.5 67.0Q146 89 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L188 710H328Q453 710 518.0 665.5Q583 621 583 535Q583 456 529.5 409.0Q476 362 373 351L374 354Q457 354 508.0 307.0Q559 260 572 168Q583 98 604.5 61.5Q626 25 657 25Q670 25 696 36L705 12Q687 2 660.5 -4.5Q634 -11 609 -11Z"/></g></symbol></defs></svg>
@@ -161,7 +206,7 @@
 <header class="pagehead"><div class="wrap">
   <span class="eyebrow">Bowdoin Undergraduate Law Review</span>
   <h1>Blog</h1>
-</div></header><main class="wrap body"><p class="empty">No posts yet.</p></main>
+</div></header><main class="wrap body"><div class="empty-wrap reveal"><div class="ornament"><span>§</span></div><p class="empty">No posts yet.</p></div></main>
 <footer>
   <div class="wrap">
     <div class="foot__crest">
@@ -182,5 +227,49 @@
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  "use strict";
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* reveal on first sight */
+  var targets = [].slice.call(document.querySelectorAll('.reveal, .sec-head'));
+  if (!('IntersectionObserver' in window) || still) {
+    targets.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  /* the photograph drifts a little slower than the page.
+     RATE x the frame height must stay under the 80px of headroom the
+     image is given, or its top edge pulls clear of the frame.        */
+  var bg = document.querySelector('.masthead__bg');
+  if (bg && !still) {
+    var RATE = 0.16, HEADROOM = 80, ticking = false;
+    var drift = function () {
+      var frame = bg.parentNode;
+      var lim = frame ? frame.offsetHeight : 300;
+      var y = Math.min(window.scrollY || 0, lim);
+      var d = Math.min(y * RATE, HEADROOM);
+      bg.style.transform = 'translate3d(0,' + d.toFixed(1) + 'px,0)';
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(drift);
+    }, { passive: true });
+    window.addEventListener('resize', drift);
+    drift();
+  }
+})();
+</script>
 </body>
 </html>
