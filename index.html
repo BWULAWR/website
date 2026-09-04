@@ -3,910 +3,214 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A new undergraduate journal of legal scholarship at Bowdoin College, published by the Bowdoin Pre-Law Society. This site is under construction; the Review will be active from the start of the 2026-27 academic year.">
-<meta property="og:title" content="Bowdoin Undergraduate Law Review">
-<meta property="og:description" content="An undergraduate journal of legal scholarship written, edited, and published by students. Site under construction; active from the 2026-27 academic year.">
-<meta property="og:type" content="website">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.2896%202.2896%22%20role%3D%22img%22%20aria-label%3D%22Bowdoin%20Undergraduate%20Law%20Review%22%3E%3Cg%20transform%3D%22translate%280.3045%2C0.0648%29%22%3E%3Cpath%20d%3D%22M0.1800%200.2300H1.5006M0.1800%201.9300H1.5006%22%20stroke%3D%22%23101413%22%20stroke-width%3D%220.1000%22%20fill%3D%22none%22%2F%3E%3Cg%20transform%3D%22translate%280.4276%2C1.5800%29%20scale%280.001408%2C-0.001408%29%22%20fill%3D%22%23101413%22%3E%3Cpath%20transform%3D%22translate%28-40.0000%2C0%29%22%20d%3D%22M40%20-3V22L60%2024Q99%2028%20117.0%2036.0Q135%2044%20140.5%2066.0Q146%2088%20146%20133V577Q146%20622%20140.5%20644.0Q135%20666%20117.0%20674.0Q99%20682%2060%20686L40%20688V713L188%20710H310Q442%20710%20513.0%20668.5Q584%20627%20584%20550Q584%20488%20542.5%20442.5Q501%20397%20423%20374L420%20381Q520%20377%20573.0%20331.0Q626%20285%20626%20202Q626%20107%20557.0%2053.5Q488%200%20366%200H188ZM310%2028H366Q454%2028%20493.0%2068.5Q532%20109%20532%20199Q532%20261%20513.0%20296.0Q494%20331%20448.0%20345.0Q402%20359%20320%20359H221V387H360Q424%20387%20457.5%20428.0Q491%20469%20491%20547Q491%20621%20457.0%20651.5Q423%20682%20340%20682H227V129Q227%2074%20245.5%2051.0Q264%2028%20310%2028Z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <title>Bowdoin Undergraduate Law Review</title>
+<meta name="description" content="A student-run publication at Bowdoin College dedicated to fostering engagement with legal scholarship, published by the Bowdoin Pre-Law Society.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.3790%202.3790%22%20%20role%3D%22img%22%20aria-label%3D%22Bowdoin%20Undergraduate%20Law%20Review%22%3E%3Cpath%20d%3D%22M0.496%200.332H1.883M0.496%202.047H1.883%22%20stroke%3D%22%23141414%22%20stroke-width%3D%220.115%22%20fill%3D%22none%22%2F%3E%3Cg%20transform%3D%22translate%280.7768%2C1.6895%29%20scale%280.001408%2C-0.001408%29%22%20fill%3D%22%23141414%22%3E%3Cpath%20transform%3D%22translate%28-40.00%2C0%29%22%20d%3D%22M40%20-3V22L60%2024Q99%2028%20117.0%2036.0Q135%2044%20140.5%2066.0Q146%2088%20146%20133V577Q146%20622%20140.5%20644.0Q135%20666%20117.0%20674.0Q99%20682%2060%20686L40%20688V713L188%20710H310Q442%20710%20513.0%20668.5Q584%20627%20584%20550Q584%20488%20542.5%20442.5Q501%20397%20423%20374L420%20381Q520%20377%20573.0%20331.0Q626%20285%20626%20202Q626%20107%20557.0%2053.5Q488%200%20366%200H188ZM310%2028H366Q454%2028%20493.0%2068.5Q532%20109%20532%20199Q532%20261%20513.0%20296.0Q494%20331%20448.0%20345.0Q402%20359%20320%20359H221V387H360Q424%20387%20457.5%20428.0Q491%20469%20491%20547Q491%20621%20457.0%20651.5Q423%20682%20340%20682H227V129Q227%2074%20245.5%2051.0Q264%2028%20310%2028Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,400&family=Libre+Franklin:wght@400;500;600&display=swap">
-
 <style>
   :root {
-    --ground:      #fcfcfb;
-    --surface:     #f4f5f2;
-    --ink:         #191c1a;
-    --ink-2:       #434744;
-    --grey:        #6b706c;
-    --line:        #e1e4e0;
-    --line-soft:   #eef0ec;
-    --accent:      #1d5c57;
-    --accent-2:    #143f3b;
-    --tint:        #e9f0ed;
+    --ground:      #fcfcfc;
+    --surface:     #f3f3f2;
+    --ink:         #141414;
+    --ink-2:       #454643;
+    --grey:        #6d6e6b;
+    --line:        #e1e1df;
+    --line-soft:   #eeeeec;
+    --band:        #111111;
+    --band-ink:    #f5f5f4;
+    --band-ink-2:  #c9cac7;
+    --band-grey:   #9a9b98;
+    --band-line:   #2c2c2c;
 
-    --band:        #101413;
-    --band-ink:    #f4f6f4;
-    --band-ink-2:  #c8d0cd;
-    --band-grey:   #96a09c;
-    --band-line:   #2b3532;
-    --band-accent: #7cc3b6;
-    --band-panel:  #171d1b;
-    --band-hover:  #222927;
-
-    --grain: 0.05;
     --gutter: clamp(1.15rem, 4.5vw, 3.5rem);
-    --bar-h: 4rem;              /* replaced at runtime with the bar's real height */
-
+    --bar-h: 4rem;
     --f-display: "Baskervville", "Baskerville", "Times New Roman", serif;
     --f-body: "Source Serif 4", "Source Serif Pro", Georgia, serif;
     --f-ui: "Libre Franklin", "Franklin Gothic", "Helvetica Neue", Arial, sans-serif;
   }
-
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --ground:      #0d100f;
-      --surface:     #151a18;
-      --ink:         #eceeec;
-      --ink-2:       #c3c8c5;
-      --grey:        #8d9491;
-      --line:        #242b29;
-      --line-soft:   #1a201e;
-      --accent:      #74b8ad;
-      --accent-2:    #9bd0c7;
-      --tint:        #16302c;
-      --band:        #050807;
-      --band-ink:    #eff1ef;
-      --band-ink-2:  #c8d0cd;
-      --band-grey:   #8d9793;
-      --band-line:   #1f2725;
-      --band-accent: #74b8ad;
-      --band-panel:  #0e1312;
-      --band-hover:  #182020;
-      --grain: 0.06;
+      --ground:#0e0e0e; --surface:#171716; --ink:#ededec; --ink-2:#c7c8c5;
+      --grey:#8e8f8c; --line:#272726; --line-soft:#1d1d1c;
+      --band:#050505; --band-ink:#f0f0ef; --band-ink-2:#c9cac7; --band-grey:#8e8f8c; --band-line:#232323;
     }
   }
-
   :root[data-theme="dark"] {
-    --ground:      #0d100f;
-    --surface:     #151a18;
-    --ink:         #eceeec;
-    --ink-2:       #c3c8c5;
-    --grey:        #8d9491;
-    --line:        #242b29;
-    --line-soft:   #1a201e;
-    --accent:      #74b8ad;
-    --accent-2:    #9bd0c7;
-    --tint:        #16302c;
-    --band:        #050807;
-    --band-ink:    #eff1ef;
-    --band-ink-2:  #c8d0cd;
-    --band-grey:   #8d9793;
-    --band-line:   #1f2725;
-    --band-accent: #74b8ad;
-    --band-panel:  #0e1312;
-    --band-hover:  #182020;
-    --grain: 0.06;
+    --ground:#0e0e0e; --surface:#171716; --ink:#ededec; --ink-2:#c7c8c5;
+    --grey:#8e8f8c; --line:#272726; --line-soft:#1d1d1c;
+    --band:#050505; --band-ink:#f0f0ef; --band-ink-2:#c9cac7; --band-grey:#8e8f8c; --band-line:#232323;
   }
 
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
   body {
     margin: 0;
-    background-color: var(--ground);
+    background: var(--ground);
     color: var(--ink);
     font-family: var(--f-body);
     font-size: 17.5px;
     font-weight: 380;
-    line-height: 1.66;
+    line-height: 1.68;
     font-variant-numeric: oldstyle-nums;
     -webkit-font-smoothing: antialiased;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
-
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    opacity: var(--grain);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
-
-  .wrap { max-width: 1140px; margin: 0 auto; padding-inline: var(--gutter); }
-
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: var(--gutter); width: 100%; }
+  main { flex: 1 0 auto; }
   a { color: inherit; }
-  a:focus-visible, button:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
-  .masthead a:focus-visible, .topbar a:focus-visible, footer a:focus-visible { outline-color: var(--band-accent); }
-
-  /* anchors clear the sticky bar whatever height it has wrapped to */
-  section[id], footer[id], .box[id], dl[id] { scroll-margin-top: calc(var(--bar-h) + 1.4rem); }
+  a:focus-visible, button:focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
 
   .eyebrow {
-    font-family: var(--f-ui);
-    font-size: 0.655rem;
-    font-weight: 500;
-    letter-spacing: 0.185em;
-    text-transform: uppercase;
-    color: var(--grey);
-    font-variant-numeric: lining-nums;
+    font-family: var(--f-ui); font-size: .655rem; font-weight: 500;
+    letter-spacing: .185em; text-transform: uppercase; color: var(--grey);
   }
 
-  .emblem { height: 1.62rem; width: 2.955rem; aspect-ratio: 1.824; flex: none; display: block; }
-  .emblem--lg { height: 2.45rem; width: 4.47rem; }
+  /* ── Top bar ─────────────────────────────── */
+  .topbar { background: var(--band); border-bottom: 1px solid var(--band-line); position: sticky; top: 0; z-index: 20; }
+  .topbar__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .55rem 1.6rem; padding-block: .85rem; }
+  .topbar__mark { display: flex; align-items: center; gap: .65rem; font-family: var(--f-display); font-size: 1.02rem; color: var(--band-ink); margin: 0; text-decoration: none; white-space: nowrap; }
+  .emblem { height: 1.6rem; width: 3.947rem; flex: none; display: block; }
+  .topnav { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1.35rem; margin-left: auto; }
+  .topnav a {
+    font-family: var(--f-ui); font-size: .665rem; font-weight: 500; letter-spacing: .105em;
+    line-height: 1.15; text-transform: uppercase; text-decoration: none; color: var(--band-grey);
+    padding: 0 0 3px; border-bottom: 1px solid transparent; transition: color .18s, border-color .18s;
+  }
+  .topnav a:hover { color: var(--band-ink); border-bottom-color: var(--band-grey); }
+  .topnav a[aria-current="page"] { color: var(--band-ink); border-bottom-color: var(--band-ink); }
 
-
-  /* ── Top bar ───────────────────────────────── */
-
-  .topbar {
-    background: var(--band);
-    border-bottom: 1px solid var(--band-line);
-    position: sticky;
-    top: 0;
-    z-index: 20;
-  }
-  .topbar__in {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.55rem 1.6rem;
-    padding-block: 0.8rem;
-  }
-  .topbar__right { display: flex; flex-wrap: wrap; align-items: center; gap: 0.55rem 1.6rem; margin-left: auto; }
-  .topbar__mark {
-    display: flex;
-    align-items: center;
-    gap: 0.62rem;
-    font-family: var(--f-display);
-    font-size: 1.02rem;
-    letter-spacing: 0.012em;
-    color: var(--band-ink);
-    margin: 0;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .topnav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 1.15rem; }
-  .nav-item { position: relative; display: flex; align-items: center; }
-
-  .nav-trigger, .nav-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.34rem;
-    font-family: var(--f-ui);
-    font-size: 0.665rem;
-    font-weight: 500;
-    letter-spacing: 0.105em;
-    line-height: 1.15;          /* buttons ignore the inherited line-height; anchors do not */
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--band-grey);
-    background: none;
-    border: 0;
-    border-bottom: 1px solid transparent;
-    padding: 0 0 3px;
-    margin: 0;
-    cursor: pointer;
-    transition: color 0.18s, border-color 0.18s;
-  }
-  .nav-trigger:hover, .nav-link:hover,
-  .nav-trigger[aria-expanded="true"] { color: var(--band-accent); border-bottom-color: var(--band-accent); }
-  .nav-trigger[data-current="true"], .nav-link[data-current="true"] {
-    color: var(--band-ink);
-    border-bottom-color: var(--band-accent);
-  }
-  .caret { width: 7px; height: 7px; flex: none; transition: transform 0.2s; }
-  .nav-trigger[aria-expanded="true"] .caret { transform: rotate(180deg); }
-
-  .nav-menu {
-    position: absolute;
-    top: calc(100% + 0.8rem);
-    left: -0.9rem;
-    z-index: 40;
-    min-width: 244px;
-    padding: 0.4rem;
-    background: var(--band-panel);
-    border: 1px solid var(--band-line);
-    box-shadow: 0 18px 44px rgba(0,0,0,0.45);
-    display: flex;
-    flex-direction: column;
-  }
-  .nav-menu[hidden] { display: none; }
-  .nav-menu--right { left: auto; right: -0.9rem; }
-
-  .nav-menu a {
-    display: block;
-    padding: 0.6rem 0.7rem;
-    text-decoration: none;
-    color: var(--band-ink);
-    font-family: var(--f-display);
-    font-size: 1rem;
-    line-height: 1.25;
-    letter-spacing: 0;
-    text-transform: none;
-    transition: background 0.14s, color 0.14s;
-  }
-  .nav-menu a:hover, .nav-menu a:focus-visible { background: var(--band-hover); color: var(--band-accent); }
-  .nav-menu a span {
-    display: block;
-    font-family: var(--f-ui);
-    font-size: 0.63rem;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    color: var(--band-grey);
-    margin-top: 0.22rem;
-  }
-  .nav-menu hr { border: 0; border-top: 1px solid var(--band-line); margin: 0.35rem 0.7rem; }
-
-  @media (max-width: 700px) {
-    .nav-menu { min-width: 0; width: calc(100vw - 2.3rem); left: 0; }
-    .nav-menu--right { right: auto; left: 0; }
-  }
-
-  .status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--f-ui);
-    font-size: 0.635rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--band-accent);
-    border: 1px solid var(--band-line);
-    padding: 0.32rem 0.7rem;
-    white-space: nowrap;
-  }
-  .status__dot { width: 5px; height: 5px; background: var(--band-accent); border-radius: 50%; flex: none; }
-  @media (max-width: 700px) { .status { display: none; } }
-
-  /* ── Masthead: the photograph is the ground, not an exhibit ── */
-
-  .masthead {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    background: var(--band);
-    color: var(--band-ink);
-  }
-  .masthead__bg {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 74% 48%;
-    filter: saturate(0.55) brightness(0.54) contrast(1.03);
-  }
-  /* the scrim is deliberately dark in both themes: it exists to carry light type */
-  .masthead__scrim {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background:
-      linear-gradient(100deg, rgba(9,12,11,0.88) 0%, rgba(9,12,11,0.70) 38%, rgba(9,12,11,0.62) 62%, rgba(9,12,11,0.80) 100%),
-      linear-gradient(to bottom, rgba(9,12,11,0.52) 0%, rgba(9,12,11,0.14) 40%, rgba(9,12,11,0.66) 100%);
-  }
-
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 258px;
-    gap: clamp(1.75rem, 5vw, 4.5rem);
-    align-items: end;
-    padding-block: clamp(1.15rem, 2.4vw, 1.85rem) clamp(1.9rem, 4vw, 3.1rem);
-  }
-  @media (max-width: 900px) { .hero { grid-template-columns: 1fr; align-items: start; } }
-
-  .hero .eyebrow { color: rgba(255,255,255,0.66); }
-  .hero__name {
-    font-family: var(--f-display);
-    font-weight: 400;
-    font-size: clamp(2.15rem, 6.1vw, 4.3rem);
-    line-height: 1.03;
-    letter-spacing: -0.012em;
-    color: var(--band-ink);
-    margin: 0.75rem 0 1rem;
-    text-shadow: 0 1px 26px rgba(0,0,0,0.4);
-  }
-  .hero__sub {
-    font-family: var(--f-display);
-    font-style: italic;
-    font-size: clamp(1.1rem, 2.4vw, 1.42rem);
-    line-height: 1.44;
-    color: var(--band-ink-2);
-    max-width: 42ch;
-    margin: 0;
-    text-shadow: 0 1px 18px rgba(0,0,0,0.45);
-  }
-
-  .rail { display: flex; flex-direction: column; padding-left: clamp(0rem, 2vw, 1.75rem); border-left: 1px solid rgba(255,255,255,0.18); }
-  @media (max-width: 900px) {
-    .rail { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.18); margin-top: 1.25rem; }
-  }
-  .rail__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    padding-block: 0.6rem;
-    border-bottom: 1px solid rgba(255,255,255,0.13);
-  }
-  .rail__row:last-child { border-bottom: none; }
-  .rail__k {
-    font-family: var(--f-ui);
-    font-size: 0.645rem;
-    font-weight: 500;
-    letter-spacing: 0.145em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.62);
-  }
-  .rail__v { font-family: var(--f-display); font-size: 1rem; color: var(--band-ink); font-variant-numeric: lining-nums tabular-nums; }
-
-  .masthead__credit {
-    position: absolute;
-    right: var(--gutter);
-    bottom: 0.55rem;
-    margin: 0;
-    font-family: var(--f-ui);
-    font-size: 0.6rem;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.52);
-  }
+  /* ── Home masthead ───────────────────────── */
+  .masthead { position: relative; isolation: isolate; overflow: hidden; background: var(--band); color: var(--band-ink); }
+  .masthead__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%; filter: brightness(.86) contrast(1.02); }
+  .masthead__scrim { position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(96deg, rgba(6,6,6,.93) 0%, rgba(6,6,6,.86) 30%, rgba(6,6,6,.52) 62%, rgba(6,6,6,.34) 100%),
+                linear-gradient(to bottom, rgba(6,6,6,.42) 0%, rgba(6,6,6,.10) 40%, rgba(6,6,6,.50) 100%); }
+  .hero { padding-block: clamp(1.6rem, 3.2vw, 2.4rem) clamp(2.2rem, 4.5vw, 3.4rem); }
+  .hero .eyebrow { color: rgba(255,255,255,.66); }
+  .hero__name { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.15rem, 6.1vw, 4.2rem); line-height: 1.03; letter-spacing: -.012em; color: var(--band-ink); margin: .75rem 0 1rem; text-shadow: 0 1px 26px rgba(0,0,0,.42); }
+  .hero__sub { font-family: var(--f-display); font-style: italic; font-size: clamp(1.08rem, 2.3vw, 1.38rem); line-height: 1.44; color: var(--band-ink-2); max-width: 44ch; margin: 0; text-shadow: 0 1px 18px rgba(0,0,0,.45); }
+  .masthead__credit { position: absolute; right: var(--gutter); bottom: .55rem; margin: 0; font-family: var(--f-ui); font-size: .6rem; letter-spacing: .13em; text-transform: uppercase; color: rgba(255,255,255,.86); text-shadow: 0 1px 10px rgba(0,0,0,.85); }
   @media (max-width: 900px) { .masthead__credit { display: none; } }
 
-  /* ── Body ──────────────────────────────────── */
+  /* ── Inner page header ───────────────────── */
+  .pagehead { background: var(--band); color: var(--band-ink); padding-block: clamp(2rem, 4.5vw, 3rem); }
+  .pagehead .eyebrow { color: var(--band-grey); }
+  .pagehead h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.06; letter-spacing: -.01em; margin: .6rem 0 0; }
 
-  .notice {
-    border: 1px solid var(--accent);
-    background: var(--tint);
-    padding: 1.1rem 1.3rem;
-    margin-top: clamp(1.85rem, 3.4vw, 2.6rem);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .notice h2 {
-    font-family: var(--f-ui);
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin: 0;
-  }
-  .notice p { margin: 0; color: var(--ink-2); max-width: 74ch; }
+  /* ── Content ─────────────────────────────── */
+  .body { padding-block: clamp(2.4rem, 5vw, 3.6rem) clamp(3rem, 6vw, 4.5rem); }
+  .prose { max-width: 68ch; }
+  .prose p { margin: 0 0 1.2rem; color: var(--ink-2); }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose a { color: var(--ink); text-underline-offset: 2px; }
 
-  .cols {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 296px;
-    gap: clamp(2rem, 5vw, 4.5rem);
-    align-items: start;
-    padding-block: clamp(1.85rem, 3.4vw, 2.6rem) clamp(2.5rem, 5vw, 3.75rem);
-  }
-  @media (max-width: 1000px) { .cols { grid-template-columns: 1fr; } }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1.25rem; padding-bottom: .6rem; margin-bottom: 1.7rem; border-bottom: 2px solid var(--ink); }
+  .sec-head h2 { font-family: var(--f-display); font-weight: 400; font-size: clamp(1.35rem, 3vw, 1.7rem); line-height: 1.15; margin: 0; }
 
-  .stack { display: flex; flex-direction: column; gap: clamp(2.75rem, 6vw, 4.25rem); }
+  .drop::first-letter { font-family: var(--f-display); float: left; font-size: 3.3em; line-height: .86; padding: .06em .12em 0 0; color: var(--ink); }
 
-  .block__head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1.25rem;
-    padding-bottom: 0.65rem;
-    margin-bottom: 1.8rem;
-    border-bottom: 2px solid var(--ink);
-  }
-  .block__head h2 {
-    font-family: var(--f-display);
-    font-weight: 400;
-    font-size: clamp(1.4rem, 3vw, 1.72rem);
-    line-height: 1.15;
-    margin: 0;
-  }
+  .empty { font-family: var(--f-display); font-style: italic; font-size: 1.1rem; color: var(--grey); margin: 0; }
 
-  .mission p { margin: 0 0 1.15rem; max-width: 64ch; color: var(--ink-2); }
-  .mission p:last-child { margin-bottom: 0; }
-  .mission .lede {
-    font-family: var(--f-display);
-    font-size: clamp(1.32rem, 2.8vw, 1.68rem);
-    line-height: 1.42;
-    color: var(--ink);
-    text-wrap: pretty;
-    margin-bottom: 1.5rem;
-  }
-  .mission .lede em { color: var(--accent); font-style: italic; }
-  .drop::first-letter {
-    font-family: var(--f-display);
-    float: left;
-    font-size: 3.3em;
-    line-height: 0.86;
-    padding: 0.06em 0.12em 0 0;
-    color: var(--accent);
-  }
+  /* ── Masthead roster ─────────────────────── */
+  .roster { display: flex; flex-direction: column; }
+  .rank { padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+  .rank:last-child { border-bottom: none; }
+  .rank__role { font-family: var(--f-ui); font-size: .645rem; font-weight: 500; letter-spacing: .155em; text-transform: uppercase; color: var(--grey); margin: 0 0 .55rem; }
+  .rank__names { display: flex; flex-wrap: wrap; gap: .3rem 2.2rem; margin: 0; }
+  .rank__names p { font-family: var(--f-display); font-size: 1.32rem; line-height: 1.3; margin: 0; }
+  .rank__names p em { font-style: normal; color: var(--grey); font-size: .92em; }
+  .rank__open { font-family: var(--f-display); font-style: italic; font-size: 1.1rem; color: var(--grey); margin: 0; }
 
-  .lead {
-    display: block;
-    text-decoration: none;
-    border-top: 2px solid var(--accent);
-    border-bottom: 1px solid var(--line);
-    padding: 1.5rem 0 1.75rem;
-    margin-bottom: 0.25rem;
-  }
-  .lead .eyebrow { color: var(--accent); }
-  .lead h3 {
-    font-family: var(--f-display);
-    font-weight: 400;
-    font-size: clamp(1.62rem, 3.6vw, 2.28rem);
-    line-height: 1.16;
-    letter-spacing: -0.006em;
-    margin: 0.7rem 0 0.65rem;
-    text-wrap: balance;
-    transition: color 0.18s;
-  }
-  .lead p { margin: 0; color: var(--ink-2); max-width: 60ch; }
-  .lead:hover h3 { color: var(--accent); }
+  /* ── Disclaimer ──────────────────────────── */
+  .disclaimer { border: 1px solid var(--line); padding: 1.15rem 1.3rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); max-width: 74ch; }
+  .disclaimer h2 { font-family: var(--f-ui); font-size: .66rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--grey); margin: 0 0 .55rem; }
+  .disclaimer p { margin: 0; color: var(--ink-2); font-size: .97rem; }
 
-  .byline {
-    font-family: var(--f-ui);
-    font-size: 0.735rem;
-    letter-spacing: 0.045em;
-    color: var(--grey);
-    margin: 0.8rem 0 0 !important;
-    font-variant-numeric: lining-nums;
-  }
-
-  .cards { display: flex; flex-direction: column; }
-  .card {
-    display: grid;
-    grid-template-columns: 8.5rem minmax(0, 1fr);
-    gap: 0.35rem 1.75rem;
-    text-decoration: none;
-    padding-block: 1.45rem;
-    border-bottom: 1px solid var(--line);
-  }
-  .card__kind { padding-top: 0.42rem; }
-  .card h4 {
-    font-family: var(--f-display);
-    font-weight: 400;
-    font-size: 1.28rem;
-    line-height: 1.24;
-    margin: 0 0 0.4rem;
-    text-wrap: balance;
-    transition: color 0.18s;
-  }
-  .card:hover h4 { color: var(--accent); }
-  .card p { margin: 0; font-size: 0.965rem; color: var(--ink-2); max-width: 58ch; }
-  @media (max-width: 620px) {
-    .card { grid-template-columns: 1fr; gap: 0.5rem; }
-    .card__kind { padding-top: 0; }
-  }
-
-  .dl { display: flex; flex-direction: column; margin: 0; }
-  .dl > div {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 0.35rem 1.25rem;
-    align-items: baseline;
-    padding-block: 0.72rem;
-    border-bottom: 1px solid var(--line-soft);
-  }
-  .dl > div:first-child { border-top: 1px solid var(--line-soft); }
-  .dl dt {
-    font-family: var(--f-ui);
-    font-size: 0.685rem;
-    font-weight: 500;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    color: var(--grey);
-    margin: 0;
-  }
-  .dl dd { margin: 0; font-family: var(--f-display); font-size: 1rem; text-align: right; font-variant-numeric: lining-nums tabular-nums; }
-
-  .side { display: flex; flex-direction: column; gap: 1.6rem; }
-  .box { border: 1px solid var(--line); padding: 1.45rem 1.35rem 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
-  .box h3 { font-family: var(--f-display); font-weight: 400; font-size: 1.24rem; line-height: 1.2; margin: 0; }
-  .box p { margin: 0; font-size: 0.945rem; color: var(--ink-2); }
-  .box .dl > div:first-child { border-top: none; padding-top: 0; }
-  .box .dl > div:last-child { border-bottom: none; padding-bottom: 0; }
-  .box--accent { background: var(--tint); border-color: var(--accent); }
-
-  .btn {
-    display: inline-block;
-    align-self: flex-start;
-    font-family: var(--f-ui);
-    font-size: 0.665rem;
-    font-weight: 600;
-    letter-spacing: 0.165em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 0.78rem 1.4rem;
-    margin-top: 0.25rem;
-    transition: background 0.18s, color 0.18s;
-  }
-  .btn:hover { background: var(--accent); color: var(--ground); }
-  .btn--wide { align-self: stretch; text-align: center; }
-
-  .seats { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); gap: 1.5rem 1.9rem; }
-  .seat p { margin: 0; }
-  .seat__role {
-    font-family: var(--f-ui);
-    font-size: 0.645rem;
-    font-weight: 500;
-    letter-spacing: 0.155em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.35rem !important;
-  }
-  .seat__name { font-family: var(--f-display); font-size: 1.14rem; color: var(--ink-2); }
-
-  .note {
-    font-family: var(--f-ui);
-    font-size: 0.775rem;
-    line-height: 1.55;
-    color: var(--grey);
-    border-left: 1px solid var(--accent);
-    padding: 0.6rem 0 0.6rem 1rem;
-    margin-top: 1.4rem;
-  }
-
-  .board-band {
-    background: var(--surface);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    padding-block: clamp(2.75rem, 6vw, 4.25rem);
-  }
-
-  footer { background: var(--band); color: var(--band-ink); padding-block: 2.75rem 3.5rem; }
-  .foot__crest { display: flex; align-items: center; justify-content: center; gap: 1rem; padding-bottom: 2.5rem; color: var(--band-line); }
+  /* ── Footer ──────────────────────────────── */
+  footer { background: var(--band); color: var(--band-ink); padding-block: 2.5rem 3rem; flex: none; }
+  .foot__crest { display: flex; align-items: center; justify-content: center; gap: 1rem; padding-bottom: 2.2rem; color: var(--band-line); }
   .foot__crest::before, .foot__crest::after { content: ""; height: 1px; width: min(24%, 190px); background: currentColor; }
-  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2.25rem; }
-  .foot__col { display: flex; flex-direction: column; gap: 0.45rem; }
-  .foot__col p { margin: 0; font-size: 0.9rem; color: var(--band-grey); }
-  .foot__col .eyebrow { color: var(--band-grey); }
-  .foot__mark { font-family: var(--f-display); font-size: 1.32rem; color: var(--band-ink) !important; }
+  .foot__crest .emblem { height: 2.3rem; width: 5.674rem; color: var(--band-ink); }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+  .foot__col { display: flex; flex-direction: column; gap: .45rem; max-width: 44ch; }
+  .foot__col p { margin: 0; font-size: .9rem; color: var(--band-grey); }
+  .foot__mark { font-family: var(--f-display); font-size: 1.3rem; color: var(--band-ink) !important; }
   .foot a { color: var(--band-ink-2); text-decoration: none; border-bottom: 1px solid var(--band-line); }
-  .foot a:hover { color: var(--band-accent); border-bottom-color: var(--band-accent); }
+  .foot a:hover { color: var(--band-ink); border-bottom-color: var(--band-ink); }
+  .foot__legal { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--band-line); }
+  .foot__legal p { margin: 0; font-size: .82rem; line-height: 1.6; color: var(--band-grey); max-width: 82ch; }
 
-  /* Narrow screens: the wordmark cannot hold one line beside the mark. */
-  @media (max-width: 430px) {
-    .emblem { height: 1.4rem; width: 2.554rem; }
-    .topbar__mark { white-space: normal; font-size: 0.92rem; line-height: 1.22; min-width: 0; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { transition: none !important; animation: none !important; }
-  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  @media (max-width: 430px) { .topbar__mark { white-space: normal; font-size: .92rem; line-height: 1.22; min-width: 0; } }
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 3.9618 2.1720"><path d="M0.1810 0.2235H3.7808M0.1810 1.9485H3.7808" stroke="currentColor" stroke-width="0.0850" fill="none"/><g transform="translate(0.3738,1.5860) scale(0.001408,-0.001408)" fill="currentColor"><path transform="translate(-40.0000,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L188 710H310Q442 710 513.0 668.5Q584 627 584 550Q584 488 542.5 442.5Q501 397 423 374L420 381Q520 377 573.0 331.0Q626 285 626 202Q626 107 557.0 53.5Q488 0 366 0H188ZM310 28H366Q454 28 493.0 68.5Q532 109 532 199Q532 261 513.0 296.0Q494 331 448.0 345.0Q402 359 320 359H221V387H360Q424 387 457.5 428.0Q491 469 491 547Q491 621 457.0 651.5Q423 682 340 682H227V129Q227 74 245.5 51.0Q264 28 310 28Z"/><path transform="translate(786.0000,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L190 710L337 713V688L309 685Q278 682 261.0 673.0Q244 664 237.5 644.5Q231 625 231 589V172Q231 113 240.0 82.0Q249 51 274.5 40.0Q300 29 348 29H423Q505 29 545.5 72.0Q586 115 594 210H616L606 -3L188 0Z"/><path transform="translate(1577.0000,0)" d="M609 -11Q558 -11 529.0 21.5Q500 54 491 121Q481 200 454.5 249.5Q428 299 384.0 322.5Q340 346 274 346H225V373H315Q407 373 447.5 410.0Q488 447 488 529Q488 609 449.5 646.5Q411 684 330 684H231V133Q231 88 236.5 66.0Q242 44 260.5 36.0Q279 28 317 24L337 22V-3L188 0L40 -3V22L60 24Q99 28 117.0 36.5Q135 45 140.5 67.0Q146 89 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L188 710H328Q453 710 518.0 665.5Q583 621 583 535Q583 456 529.5 409.0Q476 362 373 351L374 354Q457 354 508.0 307.0Q559 260 572 168Q583 98 604.5 61.5Q626 25 657 25Q670 25 696 36L705 12Q687 2 660.5 -4.5Q634 -11 609 -11Z"/></g></symbol></defs></svg>
-<span id="top"></span>
-
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 5.4170 2.1960"><path d="M0.183 0.226H5.234M0.183 1.971H5.234" stroke="currentColor" stroke-width="0.085" fill="none"/><g transform="translate(0.4536,1.5980) scale(0.001408,-0.001408)" fill="currentColor"><path transform="translate(-40.00,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L188 710H310Q442 710 513.0 668.5Q584 627 584 550Q584 488 542.5 442.5Q501 397 423 374L420 381Q520 377 573.0 331.0Q626 285 626 202Q626 107 557.0 53.5Q488 0 366 0H188ZM310 28H366Q454 28 493.0 68.5Q532 109 532 199Q532 261 513.0 296.0Q494 331 448.0 345.0Q402 359 320 359H221V387H360Q424 387 457.5 428.0Q491 469 491 547Q491 621 457.0 651.5Q423 682 340 682H227V129Q227 74 245.5 51.0Q264 28 310 28Z"/><path transform="translate(796.00,0)" d="M387 -11Q260 -11 195.5 48.0Q131 107 131 223V577Q131 622 125.5 644.0Q120 666 102.0 674.0Q84 682 45 686L25 688V713L173 710H174L322 713V688L302 686Q264 682 245.5 673.5Q227 665 221.5 643.5Q216 622 216 577V223Q216 127 268.5 74.5Q321 22 415 22Q508 22 556.0 74.5Q604 127 604 229V577Q604 622 598.5 644.0Q593 666 575.0 674.0Q557 682 518 686L498 688V713L646 711L745 713V688L725 686Q687 682 668.5 673.5Q650 665 644.5 643.5Q639 622 639 577V229Q639 109 576.5 49.0Q514 -11 387 -11Z"/><path transform="translate(1696.00,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L190 710L337 713V688L309 685Q278 682 261.0 673.0Q244 664 237.5 644.5Q231 625 231 589V172Q231 113 240.0 82.0Q249 51 274.5 40.0Q300 29 348 29H423Q505 29 545.5 72.0Q586 115 594 210H616L606 -3L188 0Z"/><path transform="translate(2497.00,0)" d="M609 -11Q558 -11 529.0 21.5Q500 54 491 121Q481 200 454.5 249.5Q428 299 384.0 322.5Q340 346 274 346H225V373H315Q407 373 447.5 410.0Q488 447 488 529Q488 609 449.5 646.5Q411 684 330 684H231V133Q231 88 236.5 66.0Q242 44 260.5 36.0Q279 28 317 24L337 22V-3L188 0L40 -3V22L60 24Q99 28 117.0 36.5Q135 45 140.5 67.0Q146 89 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L188 710H328Q453 710 518.0 665.5Q583 621 583 535Q583 456 529.5 409.0Q476 362 373 351L374 354Q457 354 508.0 307.0Q559 260 572 168Q583 98 604.5 61.5Q626 25 657 25Q670 25 696 36L705 12Q687 2 660.5 -4.5Q634 -11 609 -11Z"/></g></symbol></defs></svg>
 <div class="topbar">
   <div class="wrap topbar__in">
-    <a class="topbar__mark" href="#top" aria-label="Bowdoin Undergraduate Law Review — back to top">
+    <a class="topbar__mark" href="index.html">
       <svg class="emblem" aria-hidden="true"><use href="#mark"/></svg>
       Bowdoin Undergraduate Law&nbsp;Review
     </a>
-    <div class="topbar__right">
-      <nav class="topnav">
-        <div class="nav-item">
-          <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="m-about" data-group="about">About<svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-          <div class="nav-menu" id="m-about" hidden>
-            <a href="#about">Mission<span>What the Review will publish</span></a>
-            <a href="#board">Founding Board<span>Seated 2025</span></a>
-          </div>
-        </div>
-
-        <a class="nav-link" href="#volume" data-group="volume">Volume I</a>
-        <a class="nav-link" href="#submissions" data-group="submissions">Submissions</a>
-      </nav>
-      <span class="status"><span class="status__dot"></span>Site in progress</span>
-    </div>
+    <nav class="topnav"><a href="index.html" aria-current="page">About</a><a href="blog.html">Blog</a><a href="submissions.html">Submissions</a><a href="masthead.html">Masthead</a><a href="contact.html">Contact</a></nav>
   </div>
 </div>
-
 <header class="masthead">
-  <img class="masthead__bg" src="frontispiece.jpg" alt="" aria-hidden="true">
+  <img class="masthead__bg" src="quad.jpg" alt="" aria-hidden="true">
   <div class="masthead__scrim"></div>
   <div class="wrap">
     <div class="hero">
-      <div>
-        <span class="eyebrow">Bowdoin College · Brunswick, Maine</span>
-        <h1 class="hero__name">Bowdoin Undergraduate Law&nbsp;Review</h1>
-        <p class="hero__sub">An undergraduate journal of legal scholarship written, edited, and published by students.</p>
-      </div>
-      <div class="rail">
-        <div class="rail__row"><span class="rail__k">Status</span><span class="rail__v">Launching 2026–27</span></div>
-        <div class="rail__row"><span class="rail__k">First volume</span><span class="rail__v">In preparation</span></div>
-        <div class="rail__row"><span class="rail__k">Published by</span><span class="rail__v">Pre-Law Society</span></div>
-        <div class="rail__row"><span class="rail__k">ISSN</span><span class="rail__v">Pending</span></div>
-      </div>
+      <span class="eyebrow">Bowdoin College · Brunswick, Maine</span>
+      <h1 class="hero__name">Bowdoin Undergraduate Law&nbsp;Review</h1>
+      <p class="hero__sub">An undergraduate journal of legal scholarship written, edited, and published by students.</p>
     </div>
   </div>
-  <p class="masthead__credit">Portland Head Light, Cape Elizabeth</p>
+  <p class="masthead__credit">The Quad of Bowdoin College in the Fall</p>
 </header>
 
-<div class="wrap">
-  <div class="notice" role="note">
-    <h2>This site is under construction</h2>
-    <p>The Bowdoin Undergraduate Law Review is not yet operating. The masthead, editorial policy, submission guidelines, and contact details are still being finalised and will be published here in full. The Review will be active from the start of the 2026–27 academic year.</p>
+<main class="wrap body">
+  <div class="sec-head"><h2>About the Review</h2></div>
+  <div class="prose">
+    <p class="drop">The Bowdoin Undergraduate Law Review is a student-run publication dedicated to fostering engagement with legal scholarship on legal issues in the United States and around the world.</p>
+    <p>The mission of the publication is to unite Bowdoin's liberal arts education with the law, encouraging students across disciplines to examine how the law shapes and is shaped by their fields of study.</p>
+    <p>Through writing, editing, and discussion, we provide students interested in public service, law, and related fields with meaningful opportunities to engage with legal ideas.</p>
   </div>
 
-  <div class="cols">
-    <main class="stack">
-
-      <section id="about" class="mission">
-        <div class="block__head"><h2>About the Review</h2><span class="eyebrow">Est. 2025</span></div>
-        <p class="lede">Serious engagement with the law does not require a law degree. It does require careful reading, an honest argument, and a <em>willingness to be edited.</em></p>
-        <p class="drop">The Bowdoin Undergraduate Law Review is a new journal, founded in 2025 and published by the Bowdoin Pre-Law Society. It will publish original legal scholarship written and edited entirely by undergraduates—constitutional law, jurisprudence, legal history, and international law, with a standing interest in the legal questions particular to Maine and the Northeast.</p>
-        <p>The Review has not yet published an issue. Its founding editorial board was seated in 2026 and is now setting the Review's editorial policy. How submissions are reviewed, which citation standard we hold to, and when the deadlines fall. That policy, and the masthead, will be published here before the Review opens for submissions in the 2026–27 academic year.</p>
-      </section>
-
-      <section id="volume" class="mission">
-        <div class="block__head"><h2>Volume I</h2><span class="eyebrow">In preparation</span></div>
-        <p>No issue has been published yet. Volume I is in preparation, and its date will be announced during the 2026–27 academic year.</p>
-        <p>Nothing will appear on this page that has not been written by an undergraduate and read by our editors. When the first issue is published, it will be archived so that the articles in it remain citable permanently.</p>
-      </section>
-
-      <section id="submissions" class="mission">
-        <div class="block__head"><h2>Submissions</h2><span class="eyebrow">Not yet open</span></div>
-        <p>Submissions are not yet open.</p>
-        <p>Full guidelines on length, citation style, the review process, and the deadlines for each cycle will be posted here before the first call for papers, along with the address to send work to. Submissions are expected to open during the 2026–27 academic year.</p>
-      </section>
-
-    </main>
-
-    <aside class="side">
-      <div class="box box--accent">
-        <h3>Opening 2026–27</h3>
-        <p>The Review becomes active at the start of the 2026–27 academic year. Until then this page stands as a placeholder.</p>
-        <p>Everything still marked "to be announced" will be published before that date.</p>
-      </div>
-
-      <div class="box">
-        <h3>Where we are</h3>
-        <dl class="dl">
-          <div><dt>Founded</dt><dd>2025</dd></div>
-          <div><dt>Board</dt><dd>Seated</dd></div>
-          <div><dt>Volume I</dt><dd>In preparation</dd></div>
-          <div><dt>Submissions</dt><dd>Not yet open</dd></div>
-        </dl>
-      </div>
-
-      <div class="box">
-        <h3>Publisher</h3>
-        <p>The Review is published by the Bowdoin Pre-Law Society at Bowdoin College, Brunswick, Maine.</p>
-      </div>
-    </aside>
+  <div class="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>The views expressed in the Bowdoin Undergraduate Law Review are those of the individual authors and do not necessarily reflect the views of the Bowdoin Undergraduate Law Review, the Bowdoin Pre-Law Society, or Bowdoin College.</p>
   </div>
-</div>
-
-<div class="board-band">
-  <div class="wrap">
-    <section id="board">
-      <div class="block__head"><h2>Founding board</h2><span class="eyebrow">Seated 2025</span></div>
-      <p style="max-width:64ch;margin:0 0 1.9rem;color:var(--ink-2)">The founding editorial board was seated in 2025. The masthead will be published here in full ahead of the 2026–27 academic year.</p>
-      <div class="seats">
-        <div class="seat"><p class="seat__role">Editor-in-Chief</p><p class="seat__name">To be announced</p></div>
-        <div class="seat"><p class="seat__role">Managing Editor</p><p class="seat__name">To be announced</p></div>
-        <div class="seat"><p class="seat__role">Executive Articles</p><p class="seat__name">To be announced</p></div>
-        <div class="seat"><p class="seat__role">Notes Editor</p><p class="seat__name">To be announced</p></div>
-        <div class="seat"><p class="seat__role">Citations Editor</p><p class="seat__name">To be announced</p></div>
-        <div class="seat"><p class="seat__role">Faculty Advisor</p><p class="seat__name">To be announced</p></div>
-      </div>
-    </section>
-  </div>
-</div>
-
-<footer id="contact">
+</main>
+<footer>
   <div class="wrap">
     <div class="foot__crest">
-      <svg class="emblem emblem--lg" role="img" aria-label="Bowdoin Undergraduate Law Review"><use href="#mark"/></svg>
+      <svg class="emblem" role="img" aria-label="Bowdoin Undergraduate Law Review"><use href="#mark"/></svg>
     </div>
     <div class="foot">
       <div class="foot__col">
         <p class="foot__mark">Bowdoin Undergraduate Law&nbsp;Review</p>
         <p>Published by the Bowdoin Pre-Law Society</p>
         <p>Bowdoin College · Brunswick, Maine 04011</p>
-        <p>ISSN pending · Founded 2025</p>
       </div>
       <div class="foot__col">
-        <span class="eyebrow">Contact</span>
-        <p>To be announced</p>
-        <p>Ahead of the 2026–27 year</p>
+        <span class="eyebrow" style="color:var(--band-grey)">Pages</span>
+        <p><a href="index.html">About</a></p>
+        <p><a href="masthead.html">Masthead</a></p>
+        <p><a href="submissions.html">Submissions</a></p>
       </div>
-      <div class="foot__col">
-        <span class="eyebrow">Sections</span>
-        <p><a href="#about">About</a></p>
-        <p><a href="#volume">Volume I</a></p>
-        <p><a href="#board">Founding Board</a></p>
-      </div>
+    </div>
+    <div class="foot__legal">
+      <p>The views expressed in the Bowdoin Undergraduate Law Review are those of the individual authors and do not necessarily reflect the views of the Bowdoin Undergraduate Law Review, the Bowdoin Pre-Law Society, or Bowdoin College.</p>
+      <p style="margin-top:.7rem">Photograph: <em>The Quad of Bowdoin College in the Fall</em> by
+        <a href="https://commons.wikimedia.org/wiki/File:Bowdoin_College_Quad.jpg">Ilove2run</a>,
+        licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC&nbsp;BY-SA&nbsp;3.0</a>.
+        Cropped and adjusted; the adapted image is offered under the same licence.</p>
     </div>
   </div>
 </footer>
-
-<script>
-(function () {
-  "use strict";
-
-  var bar = document.querySelector('.topbar');
-
-  /* The bar wraps to two rows on mid-size screens, so the anchor offset has to
-     follow its real height or headings land underneath it. */
-  function measureBar() {
-    if (!bar) return;
-    document.documentElement.style.setProperty(
-      '--bar-h', Math.round(bar.getBoundingClientRect().height) + 'px');
-  }
-  measureBar();
-  window.addEventListener('resize', measureBar);
-  if (window.ResizeObserver && bar) new ResizeObserver(measureBar).observe(bar);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureBar);
-
-  /* ── Dropdowns ───────────────────────────────────────────────
-     Click or keyboard everywhere; hover only where there is a real
-     pointer, so touch devices are not left with a menu that opens
-     on the tap that was meant to select something.              */
-
-  var items = [].slice.call(document.querySelectorAll('.nav-item'));
-  var hoverable = window.matchMedia('(hover: hover) and (pointer: fine)');
-  var openItem = null;
-  var openedBy = null;   /* 'hover' or 'click' — a hover-opened menu must not
-                            close on the click that was meant to commit to it */
-  var hoverTimer;
-
-  function menuOf(item) { return item.querySelector('.nav-menu'); }
-  function triggerOf(item) { return item.querySelector('.nav-trigger'); }
-
-  function close(item) {
-    if (!item) return;
-    menuOf(item).hidden = true;
-    triggerOf(item).setAttribute('aria-expanded', 'false');
-    if (openItem === item) { openItem = null; openedBy = null; }
-  }
-
-  function closeAll(except) {
-    items.forEach(function (i) { if (i !== except) close(i); });
-  }
-
-  function open(item, how) {
-    closeAll(item);
-    openedBy = how || 'click';
-    var menu = menuOf(item);
-    menu.hidden = false;
-    triggerOf(item).setAttribute('aria-expanded', 'true');
-    openItem = item;
-
-    /* keep the panel inside the window */
-    menu.classList.remove('nav-menu--flip');
-    var r = menu.getBoundingClientRect();
-    if (r.right > window.innerWidth - 8) {
-      menu.style.left = 'auto';
-      menu.style.right = '-0.9rem';
-    }
-  }
-
-  items.forEach(function (item) {
-    var trigger = triggerOf(item);
-    var menu = menuOf(item);
-
-    trigger.addEventListener('click', function (ev) {
-      ev.stopPropagation();
-      if (menu.hidden) {
-        open(item, 'click');
-      } else if (openedBy === 'hover') {
-        openedBy = 'click';          /* hover put it there; the click keeps it */
-      } else {
-        close(item);
-      }
-    });
-
-    trigger.addEventListener('keydown', function (ev) {
-      if (ev.key === 'ArrowDown') {
-        ev.preventDefault();
-        open(item, 'click');
-        var first = menu.querySelector('a');
-        if (first) first.focus();
-      }
-    });
-
-    menu.addEventListener('keydown', function (ev) {
-      var links = [].slice.call(menu.querySelectorAll('a'));
-      var i = links.indexOf(document.activeElement);
-      if (ev.key === 'ArrowDown') { ev.preventDefault(); (links[i + 1] || links[0]).focus(); }
-      else if (ev.key === 'ArrowUp') { ev.preventDefault(); (links[i - 1] || links[links.length - 1]).focus(); }
-      else if (ev.key === 'Escape') { ev.preventDefault(); close(item); trigger.focus(); }
-    });
-
-    /* a chosen destination should not leave the menu hanging open */
-    menu.addEventListener('click', function (ev) {
-      if (ev.target.closest('a')) close(item);
-    });
-
-    item.addEventListener('mouseenter', function () {
-      if (!hoverable.matches) return;
-      clearTimeout(hoverTimer);
-      if (menu.hidden) open(item, 'hover');
-    });
-    item.addEventListener('mouseleave', function () {
-      if (!hoverable.matches) return;
-      clearTimeout(hoverTimer);
-      hoverTimer = setTimeout(function () {
-        if (openItem === item && openedBy === 'hover') close(item);
-      }, 220);
-    });
-  });
-
-  document.addEventListener('click', function (ev) {
-    if (openItem && !ev.target.closest('.nav-item')) closeAll();
-  });
-  document.addEventListener('keydown', function (ev) {
-    if (ev.key === 'Escape' && openItem) {
-      var t = triggerOf(openItem);
-      closeAll();
-      if (t) t.focus();
-    }
-  });
-
-  /* ── Which section am I in ───────────────────────────────────
-     Sections map onto the menu they live under, so the top-level
-     item lights up rather than a link the reader cannot see.    */
-
-  var SPY = [
-    { id: 'about',       group: 'about' },
-    { id: 'volume',      group: 'volume' },
-    { id: 'submissions', group: 'submissions' },
-    { id: 'board',       group: 'about' }
-  ];
-  var marks = [].slice.call(document.querySelectorAll('[data-group]'));
-  var current = null;
-
-  function setCurrent(group) {
-    current = group;
-    marks.forEach(function (m) {
-      if (group && m.getAttribute('data-group') === group) m.setAttribute('data-current', 'true');
-      else m.removeAttribute('data-current');
-    });
-  }
-
-  function update() {
-    var line = (bar ? bar.getBoundingClientRect().height : 60) + 34;
-    var found = null;
-    SPY.forEach(function (s) {
-      var el = document.getElementById(s.id);
-      if (el && el.getBoundingClientRect().top - line <= 4) found = s.group;
-    });
-    if (window.scrollY < 24) found = null;
-    if (found !== current) setCurrent(found);
-  }
-
-  var ticking = false;
-  window.addEventListener('scroll', function () {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function () { update(); ticking = false; });
-  }, { passive: true });
-  window.addEventListener('resize', update);
-  update();
-
-  var mark = document.querySelector('.topbar__mark');
-  if (mark) mark.addEventListener('click', function (ev) {
-    ev.preventDefault();
-    closeAll();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
-    setCurrent(null);
-  });
-})();
-</script>
 </body>
 </html>
