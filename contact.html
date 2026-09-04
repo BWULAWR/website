@@ -89,12 +89,10 @@
   .masthead__scrim { position: absolute; inset: 0; z-index: -1;
     background: linear-gradient(96deg, rgba(6,6,6,.93) 0%, rgba(6,6,6,.86) 30%, rgba(6,6,6,.52) 62%, rgba(6,6,6,.34) 100%),
                 linear-gradient(to bottom, rgba(6,6,6,.42) 0%, rgba(6,6,6,.10) 40%, rgba(6,6,6,.50) 100%); }
-  .hero { padding-block: clamp(1.6rem, 3.2vw, 2.4rem) clamp(2.2rem, 4.5vw, 3.4rem); }
+  .hero { padding-block: clamp(2.6rem, 6vw, 4.4rem) clamp(2.8rem, 6.4vw, 4.8rem); }
   .hero .eyebrow { color: rgba(255,255,255,.66); }
-  .hero__name { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.15rem, 6.1vw, 4.2rem); line-height: 1.03; letter-spacing: -.012em; color: var(--band-ink); margin: .75rem 0 1rem; text-shadow: 0 1px 26px rgba(0,0,0,.42); }
+  .hero__name { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.15rem, 6.1vw, 4.2rem); line-height: 1.03; letter-spacing: -.012em; color: var(--band-ink); margin: 0; text-shadow: 0 1px 26px rgba(0,0,0,.42); }
   .hero__sub { font-family: var(--f-display); font-style: italic; font-size: clamp(1.08rem, 2.3vw, 1.38rem); line-height: 1.44; color: var(--band-ink-2); max-width: 44ch; margin: 0; text-shadow: 0 1px 18px rgba(0,0,0,.45); }
-  .masthead__credit { position: absolute; right: var(--gutter); bottom: .55rem; margin: 0; font-family: var(--f-ui); font-size: .6rem; letter-spacing: .13em; text-transform: uppercase; color: rgba(255,255,255,.86); text-shadow: 0 1px 10px rgba(0,0,0,.85); }
-  @media (max-width: 900px) { .masthead__credit { display: none; } }
 
   /* ── Inner page header ───────────────────── */
   .pagehead { background: var(--band); color: var(--band-ink); padding-block: clamp(2rem, 4.5vw, 3rem); }
@@ -131,18 +129,18 @@
   .disclaimer p { margin: 0; color: var(--ink-2); font-size: .97rem; }
 
   /* ── Footer ──────────────────────────────── */
-  footer { background: var(--band); color: var(--band-ink); padding-block: 2.5rem 3rem; flex: none; }
-  .foot__crest { display: flex; align-items: center; justify-content: center; gap: 1rem; padding-bottom: 2.2rem; color: var(--band-line); }
+  footer { background: var(--band); color: var(--band-ink); padding-block: 1.5rem 1.9rem; flex: none; }
+  .foot__crest { display: flex; align-items: center; justify-content: center; gap: .9rem; padding-bottom: 1.35rem; color: var(--band-line); }
   .foot__crest::before, .foot__crest::after { content: ""; height: 1px; width: min(24%, 190px); background: currentColor; }
-  .foot__crest .emblem { height: 2.3rem; width: 5.674rem; color: var(--band-ink); }
+  .foot__crest .emblem { height: 1.5rem; width: 5.674rem; color: var(--band-ink); }
   .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
   .foot__col { display: flex; flex-direction: column; gap: .45rem; max-width: 44ch; }
-  .foot__col p { margin: 0; font-size: .9rem; color: var(--band-grey); }
-  .foot__mark { font-family: var(--f-display); font-size: 1.3rem; color: var(--band-ink) !important; }
+  .foot__col p { margin: 0; font-size: .82rem; color: var(--band-grey); }
+  .foot__mark { font-family: var(--f-display); font-size: 1.06rem; color: var(--band-ink) !important; margin-bottom: .1rem !important; }
   .foot a { color: var(--band-ink-2); text-decoration: none; border-bottom: 1px solid var(--band-line); }
   .foot a:hover { color: var(--band-ink); border-bottom-color: var(--band-ink); }
-  .foot__legal { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--band-line); }
-  .foot__legal p { margin: 0; font-size: .82rem; line-height: 1.6; color: var(--band-grey); max-width: 82ch; }
+  .foot__legal { margin-top: 1.25rem; padding-top: .95rem; border-top: 1px solid var(--band-line); }
+  .foot__legal p { margin: 0; font-size: .72rem; line-height: 1.55; color: var(--band-grey); max-width: 90ch; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
   @media (max-width: 430px) { .topbar__mark { white-space: normal; font-size: .92rem; line-height: 1.22; min-width: 0; } }
@@ -171,19 +169,12 @@
     <div class="foot">
       <div class="foot__col">
         <p class="foot__mark">Bowdoin Undergraduate Law&nbsp;Review</p>
-        <p>Published by the Bowdoin Pre-Law Society</p>
+        <p>Published by the <a href="https://www.bowdoinprelaw.com/">Bowdoin Pre-Law Society</a></p>
         <p>Bowdoin College · Brunswick, Maine 04011</p>
-      </div>
-      <div class="foot__col">
-        <span class="eyebrow" style="color:var(--band-grey)">Pages</span>
-        <p><a href="index.html">About</a></p>
-        <p><a href="masthead.html">Masthead</a></p>
-        <p><a href="submissions.html">Submissions</a></p>
       </div>
     </div>
     <div class="foot__legal">
-      <p>The views expressed in the Bowdoin Undergraduate Law Review are those of the individual authors and do not necessarily reflect the views of the Bowdoin Undergraduate Law Review, the Bowdoin Pre-Law Society, or Bowdoin College.</p>
-      <p style="margin-top:.7rem">Photograph: <em>The Quad of Bowdoin College in the Fall</em> by
+      <p>Photograph: <em>The Quad of Bowdoin College in the Fall</em> by
         <a href="https://commons.wikimedia.org/wiki/File:Bowdoin_College_Quad.jpg">Ilove2run</a>,
         licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC&nbsp;BY-SA&nbsp;3.0</a>.
         Cropped and adjusted; the adapted image is offered under the same licence.</p>
