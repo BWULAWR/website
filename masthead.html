@@ -74,11 +74,26 @@
   .topbar__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .55rem 1.6rem; padding-block: .85rem; }
   .topbar__mark { display: flex; align-items: center; gap: .65rem; font-family: var(--f-display); font-size: 1.02rem; color: var(--band-ink); margin: 0; text-decoration: none; white-space: nowrap; }
   .emblem { height: 1.6rem; width: 3.947rem; flex: none; display: block; }
-  .topnav { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1.35rem; margin-left: auto; }
+  /* Row gap is .5rem so that when the nav wraps on a phone the 24px tap
+     pads below tile edge to edge instead of overlapping one another.   */
+  .topnav { display: flex; flex-wrap: wrap; align-items: center; gap: .62rem 1.35rem; margin-left: auto; }
   .topnav a {
     font-family: var(--f-ui); font-size: .665rem; font-weight: 500; letter-spacing: .105em;
     line-height: 1.15; text-transform: uppercase; text-decoration: none; color: var(--band-grey);
     padding: 0 0 3px; border-bottom: 1px solid transparent; transition: color .18s, border-color .18s;
+  }
+  /* The label itself is only ~16px tall. This invisible pad lifts the tap
+     target to 24px (WCAG 2.5.8) without moving a pixel of the design.   */
+  .topnav a::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 50%;
+    height: 26px; transform: translateY(-50%);
+  }
+  /* The address is the one action on the contact page; give it a finger-sized
+     pad too. It sits alone on its line, so the pad cannot steal a neighbour. */
+  .prose a[href^="mailto:"] { position: relative; }
+  .prose a[href^="mailto:"]::before {
+    content: ""; position: absolute; left: -4px; right: -4px; top: 50%;
+    height: 26px; transform: translateY(-50%);
   }
   .topnav a:hover { color: var(--band-ink); border-bottom-color: var(--band-grey); }
   .topnav a[aria-current="page"] { color: var(--band-ink); border-bottom-color: var(--band-ink); }
@@ -116,6 +131,12 @@
   /* ── Masthead roster ─────────────────────── */
   .roster { display: flex; flex-direction: column; }
   .rank { padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+  @media (prefers-reduced-motion: no-preference) {
+    .js .rank:nth-child(2).is-in { transition-delay: .07s; }
+    .js .rank:nth-child(3).is-in { transition-delay: .14s; }
+    .js .rank:nth-child(4).is-in { transition-delay: .21s; }
+    .js .rank:nth-child(5).is-in { transition-delay: .28s; }
+  }
   .rank:last-child { border-bottom: none; }
   .rank__role { font-family: var(--f-ui); font-size: .645rem; font-weight: 500; letter-spacing: .155em; text-transform: uppercase; color: var(--grey); margin: 0 0 .55rem; }
   .rank__names { display: flex; flex-wrap: wrap; gap: .3rem 2.2rem; margin: 0; }
@@ -142,6 +163,33 @@
   .foot a[href^="http"]::after { content: "↗"; font-size: .82em; margin-left: .18em; vertical-align: .08em; }
   .foot__legal { margin-top: 1.25rem; padding-top: .95rem; border-top: 1px solid var(--band-line); }
   .foot__legal p { margin: 0; font-size: .72rem; line-height: 1.55; color: var(--band-grey); max-width: 90ch; }
+
+  /* ── Page-to-page transitions ───────────── */
+  /* Ignored entirely by browsers that don't support it; navigation just works. */
+  @view-transition { navigation: auto; }
+  .topbar { view-transition-name: bar; }
+  footer  { view-transition-name: foot; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .34s; }
+  @media (prefers-reduced-motion: reduce) {
+    @view-transition { navigation: none; }
+  }
+
+  /* ── Small details ──────────────────────── */
+  ::selection { background: var(--ink); color: var(--ground); }
+  .masthead ::selection, .pagehead ::selection, footer ::selection { background: var(--band-ink); color: var(--band); }
+  .prose p { text-wrap: pretty; }
+  /* A very long unbroken string — a future article title, a pasted URL, an
+     address — breaks rather than pushing the page sideways on a phone.   */
+  h1, h2, h3, h4, p, li, dt, dd, a, figcaption { overflow-wrap: break-word; }
+  * { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--line); border: 3px solid var(--ground); border-radius: 6px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--grey); }
+
+  /* the bar lifts off the page once you leave the top */
+  .topbar { transition: box-shadow .3s, border-color .3s; }
+  .topbar.is-stuck { box-shadow: 0 6px 22px rgba(0,0,0,.28); border-bottom-color: var(--band-ink); }
 
   /* ── Ornament ───────────────────────────── */
   .ornament { display: flex; align-items: center; justify-content: center; gap: 1.1rem; color: var(--line); margin: 0 0 1.6rem; }
@@ -207,24 +255,24 @@
   <span class="eyebrow">Bowdoin Undergraduate Law Review</span>
   <h1>Masthead</h1>
 </div></header><main class="wrap body">
-  <div class="roster reveal">
-    <div class="rank">
+  <div class="roster">
+    <div class="rank reveal">
       <p class="rank__role">Editors-in-Chief</p>
       <div class="rank__names"><p>James Stuber <em>'28</em></p><p>Zion An <em>'28</em></p></div>
     </div>
-    <div class="rank">
+    <div class="rank reveal">
       <p class="rank__role">Managing Editor</p>
       <div class="rank__names"><p>Gianna Keuer <em>'28</em></p></div>
     </div>
-    <div class="rank">
+    <div class="rank reveal">
       <p class="rank__role">Web Editor</p>
       <div class="rank__names"><p>Joseph Ko <em>'28</em></p></div>
     </div>
-    <div class="rank">
+    <div class="rank reveal">
       <p class="rank__role">Staff Editors</p>
       <p class="rank__open">Positions open.</p>
     </div>
-    <div class="rank">
+    <div class="rank reveal">
       <p class="rank__role">Staff Writers</p>
       <p class="rank__open">Positions open.</p>
     </div>
@@ -291,6 +339,18 @@
     }, { passive: true });
     window.addEventListener('resize', drift);
     drift();
+  }
+
+  /* the bar picks up a shadow once the page has moved under it */
+  var bar = document.querySelector('.topbar');
+  if (bar) {
+    var stuck = false;
+    var mark = function () {
+      var on = (window.scrollY || 0) > 8;
+      if (on !== stuck) { stuck = on; bar.classList.toggle('is-stuck', on); }
+    };
+    window.addEventListener('scroll', mark, { passive: true });
+    mark();
   }
 })();
 </script>
