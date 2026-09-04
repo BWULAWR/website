@@ -137,8 +137,9 @@
   .foot__col { display: flex; flex-direction: column; gap: .45rem; max-width: 44ch; }
   .foot__col p { margin: 0; font-size: .82rem; color: var(--band-grey); }
   .foot__mark { font-family: var(--f-display); font-size: 1.06rem; color: var(--band-ink) !important; margin-bottom: .1rem !important; }
-  .foot a { color: var(--band-ink-2); text-decoration: none; border-bottom: 1px solid var(--band-line); }
-  .foot a:hover { color: var(--band-ink); border-bottom-color: var(--band-ink); }
+  .foot a { color: var(--band-ink); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.45); padding-bottom: 1px; transition: border-color .18s; }
+  .foot a:hover, .foot a:focus-visible { border-bottom-color: var(--band-ink); }
+  .foot a[href^="http"]::after { content: "↗"; font-size: .82em; margin-left: .18em; vertical-align: .08em; }
   .foot__legal { margin-top: 1.25rem; padding-top: .95rem; border-top: 1px solid var(--band-line); }
   .foot__legal p { margin: 0; font-size: .72rem; line-height: 1.55; color: var(--band-grey); max-width: 90ch; }
 
