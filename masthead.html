@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Masthead · Bowdoin Student Legal Forum</title>
-<meta name="description" content="The editors of the Bowdoin Student Legal Forum.">
+<meta name="description" content="The editors and staff writers of the Bowdoin Student Legal Forum.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%23111%22/%3E%3Csvg%20x%3D%229%22%20y%3D%229%22%20width%3D%2246%22%20height%3D%2246%22%20viewBox%3D%220%200%201.7325%202.3460%22%20color%3D%22%23f5f5f4%22%3E%3Cpath%20d%3D%22M0.183%200.263H1.549M0.183%202.083H1.549%22%20stroke%3D%22currentColor%22%20stroke-width%3D%220.160%22%20fill%3D%22none%22/%3E%3Cg%20transform%3D%22translate%280.4536%2C1.6730%29%20scale%280.001408%2C-0.001408%29%22%20fill%3D%22currentColor%22%3E%3Cpath%20transform%3D%22translate%28-40.00%2C0%29%22%20d%3D%22M40%20-3V22L60%2024Q99%2028%20117.0%2036.0Q135%2044%20140.5%2066.0Q146%2088%20146%20133V577Q146%20622%20140.5%20644.0Q135%20666%20117.0%20674.0Q99%20682%2060%20686L40%20688V713L188%20710H310Q442%20710%20513.0%20668.5Q584%20627%20584%20550Q584%20488%20543%20443Q506%20402%20441%20380Q526%20372%20573%20331Q626%20285%20626%20202Q626%20107%20557.0%2053.5Q488%200%20366%200H188ZM310%2028H366Q454%2028%20493.0%2068.5Q532%20109%20532%20199Q532%20261%20513.0%20296.0Q494%20331%20448.0%20345.0Q402%20359%20320%20359H227V129Q227%2074%20245.5%2051.0Q264%2028%20310%2028ZM227%20387H360Q424%20387%20457.5%20428.0Q491%20469%20491%20547Q491%20621%20457.0%20651.5Q423%20682%20340%20682H227Z%22/%3E%3C/g%3E%3C/svg%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,7 +136,6 @@
   .rank__names { display: flex; flex-wrap: wrap; gap: .3rem 2.2rem; margin: 0; }
   .rank__names p { font-family: var(--f-display); font-size: 1.32rem; line-height: 1.3; margin: 0; }
   .rank__names p em { font-style: normal; color: var(--grey); font-size: .92em; }
-  .rank__open { font-family: var(--f-display); font-style: italic; font-size: 1.1rem; color: var(--grey); margin: 0; }
 
   /* ── Disclaimer ──────────────────────────── */
   .disclaimer { border: 1px solid var(--line); padding: 1.15rem 1.3rem; margin-top: clamp(2.5rem, 5vw, 3.5rem); max-width: 74ch; }
@@ -256,27 +255,6 @@
     line-height: 1.15; text-transform: uppercase; text-decoration: none; color: var(--ink);
   }
 
-  /* ── Editor-application notice ───────────── */
-  /* Hidden by default; a script in the page head adds .apps-open until the
-     deadline, before first paint, so nothing jumps and no-JS readers never
-     see a stale notice.                                                    */
-  .when-open { display: none; }
-  .apps-open .when-open { display: block; }
-  .apps-open .when-closed { display: none; }
-  .apply { margin-bottom: clamp(2.4rem, 5.5vw, 3.4rem); }
-  .notice {
-    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-    gap: 1.15rem 2.2rem; background: var(--surface); border-left: 3px solid var(--ink);
-    padding: 1.3rem clamp(1.1rem, 3vw, 1.7rem);
-  }
-  .notice__text { flex: 1 1 26rem; min-width: 0; }
-  .notice__label { font-family: var(--f-ui); font-size: .66rem; font-weight: 600; letter-spacing: .16em;
-    text-transform: uppercase; color: var(--grey); margin: 0 0 .5rem; }
-  .notice__text p { margin: 0; color: var(--ink-2); max-width: 60ch; }
-  .notice__text .notice__due { margin-top: .5rem; font-family: var(--f-display); font-size: 1.16rem;
-    line-height: 1.3; color: var(--ink); }
-  @media (max-width: 560px) { .notice .btn { width: 100%; } }
-
   /* ── Home: write for the Forum ───────────── */
   .write { margin-top: clamp(2.8rem, 6vw, 4rem); }
   .write__lede { max-width: 68ch; margin: 0 0 1.5rem; color: var(--ink-2); }
@@ -315,7 +293,7 @@
   .rail__q a { color: var(--ink); text-underline-offset: 2px; }
 
   /* ── Line breaks ─────────────────────────── */
-  .hero__name, .pagehead h1, .sec-head h2, .card__title, .tile__title, .tile__note, .notice__due { text-wrap: balance; }
+  .hero__name, .pagehead h1, .sec-head h2, .card__title, .tile__title, .tile__note { text-wrap: balance; }
   .nw { white-space: nowrap; }
 
   /* On narrow screens the submit cards sit below the guidelines: offer a jump. */
@@ -325,12 +303,12 @@
   /* ── Small additions to existing pages ───── */
   .empty-wrap .link-arrow { margin-top: .9rem; }
   .rank .link-arrow { margin-top: .45rem; }
+
+  /* Masthead on phones: one name per line, so the four-name staff lists
+     don't wrap into uneven rows. */
+  @media (max-width: 480px) { .rank__names { flex-direction: column; } }
 </style>
-<script>document.documentElement.className += " js";
-  /* Editor applications close at the end of Friday, October 23 (Eastern).
-     To move the deadline, change this date and the date in the page text. */
-  if (Date.now() < Date.parse("2026-10-24T00:00:00-04:00")) document.documentElement.className += " apps-open";
-</script>
+<script>document.documentElement.className += " js";</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="0 0 5.0057 2.1960"><path d="M0.183 0.226H4.823M0.183 1.971H4.823" stroke="currentColor" stroke-width="0.085" fill="none"/><g transform="translate(0.4536,1.5980) scale(0.001408,-0.001408)" fill="currentColor"><path transform="translate(-40.00,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L188 710H310Q442 710 513.0 668.5Q584 627 584 550Q584 488 543 443Q506 402 441 380Q526 372 573 331Q626 285 626 202Q626 107 557.0 53.5Q488 0 366 0H188ZM310 28H366Q454 28 493.0 68.5Q532 109 532 199Q532 261 513.0 296.0Q494 331 448.0 345.0Q402 359 320 359H227V129Q227 74 245.5 51.0Q264 28 310 28ZM227 387H360Q424 387 457.5 428.0Q491 469 491 547Q491 621 457.0 651.5Q423 682 340 682H227Z"/><path transform="translate(796.00,0)" d="M309 -11Q269 -11 236.5 2.0Q204 15 178 28Q156 40 141.5 46.0Q127 52 116 52Q102 52 96.5 40.5Q91 29 88 15L85 0H60L65 118L62 247H87L98 200Q109 156 137.5 114.0Q166 72 209.5 45.0Q253 18 309 18Q340 18 368.5 31.5Q397 45 415.5 73.0Q434 101 434 146Q434 191 414.5 223.5Q395 256 358.5 282.0Q322 308 270 332L228 352Q153 388 116.5 431.5Q80 475 80 543Q80 596 106.0 637.0Q132 678 177.5 701.0Q223 724 282 724Q323 724 351.0 713.0Q379 702 395 694Q421 681 436 681Q452 681 455 712H480L477 616L479 519H454Q448 575 423.0 614.5Q398 654 362.5 675.0Q327 696 287 696Q228 696 191.5 662.0Q155 628 155 575Q155 518 192.0 485.5Q229 453 288 424L329 404Q384 377 423.5 348.5Q463 320 484.5 282.0Q506 244 506 187Q506 128 479.5 83.0Q453 38 408.5 13.5Q364 -11 309 -11Z"/><path transform="translate(1507.00,0)" d="M40 -3V22L60 24Q99 28 117.0 36.0Q135 44 140.5 66.0Q146 88 146 133V577Q146 622 140.5 644.0Q135 666 117.0 674.0Q99 682 60 686L40 688V713L190 710L337 713V688L309 685Q278 682 261.0 673.0Q244 664 237.5 644.5Q231 625 231 589V172Q231 113 240.0 82.0Q249 51 274.5 40.0Q300 29 348 29H423Q505 29 545.5 72.0Q586 115 594 210H616L606 -3L188 0Z"/><path transform="translate(2308.00,0)" d="M40 -3V22L60 24Q99 29 117.0 37.0Q135 45 140.5 67.0Q146 89 146 133V577Q146 622 140.5 643.5Q135 665 117.0 673.5Q99 682 60 686L40 688V713L188 710H468L590 713L593 637L602 548H578Q572 617 528.0 649.0Q484 681 395 681H231V388H343Q378 388 394.5 416.0Q411 444 414 508H439L436 374L439 226H414Q414 295 397.0 327.5Q380 360 343 360H231V133Q231 89 237.0 66.5Q243 44 261.5 35.5Q280 27 317 24L351 22V-3L189 0H188Z"/></g></symbol></defs></svg>
@@ -362,15 +340,11 @@
     </div>
     <div class="rank reveal">
       <p class="rank__role">Staff Editors</p>
-      <p class="rank__open when-closed">Positions open.</p>
-      <div class="when-open">
-        <p class="rank__open">Applications open through Friday, October&nbsp;23.</p>
-        <a class="link-arrow" href="https://docs.google.com/forms/d/e/1FAIpQLSd9P4gsKZ0vX056JGBfy2MqonNPCSeLQ2Rg-Jk7SFiay2ReZQ/viewform?usp=header">Apply to be an editor<span class="arr" aria-hidden="true">→</span></a>
-      </div>
+      <div class="rank__names"><p>Reed Dietrick <em>’29</em></p><p>Kayley Huleatt <em>’28</em></p><p>Natalia Lopez <em>’28</em></p><p>Ben Vinocur <em>’28</em></p></div>
     </div>
     <div class="rank reveal">
       <p class="rank__role">Staff Writers</p>
-      <p class="rank__open">Positions open.</p>
+      <div class="rank__names"><p>Hank Bartholomew <em>’30</em></p><p>Shanna Chung <em>’30</em></p><p>Emma Landry <em>’29</em></p><p>Jamie Yue <em>’28</em></p></div>
       <a class="link-arrow" href="submissions.html#writers">Join the writers’ list<span class="arr" aria-hidden="true">→</span></a>
     </div>
   </div>
