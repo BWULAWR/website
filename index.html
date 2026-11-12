@@ -302,11 +302,18 @@
 
   /* ── Small additions to existing pages ───── */
   .empty-wrap .link-arrow { margin-top: .9rem; }
-  .rank .link-arrow { margin-top: .45rem; }
 
   /* Masthead on phones: one name per line, so the four-name staff lists
      don't wrap into uneven rows. */
   @media (max-width: 480px) { .rank__names { flex-direction: column; } }
+
+  /* ── Inner pages: the quad behind the title band ── */
+  /* Reuses the home page's photo and wash (.masthead__bg, .masthead__scrim). */
+  .pagehead--photo { position: relative; isolation: isolate; overflow: hidden; }
+  /* small text over a photo: full-strength ink keeps it at 4.5:1 or better
+     against the brightest pixel behind it, even on a phone */
+  .pagehead--photo .eyebrow { color: var(--band-ink); }
+  .pagehead--photo .eyebrow, .pagehead--photo h1 { text-shadow: 0 1px 20px rgba(0,0,0,.5); }
 </style>
 <script>document.documentElement.className += " js";</script>
 </head>
